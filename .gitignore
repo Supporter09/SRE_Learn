@@ -1,0 +1,34 @@
+# Redis data files
+cache/redis/data/
+*.aof
+*.rdb
+
+# Kafka data files
+queue/kafka/kafka_data/
+queue/kafka/zookeeper_data/
+
+# General data and log files
+*.log
+*.lock
+*.checkpoint
+meta.properties
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
