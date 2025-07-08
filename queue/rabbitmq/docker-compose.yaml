@@ -1,0 +1,16 @@
+services:   
+  rabbitmq:     
+    image: 'rabbitmq:3-management-alpine'     
+    ports:       
+      - '5672:5672'       # AMQP protocol
+      - '15672:15672'     # Management UI     
+    environment:       
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+    networks: 
+      - rabbitmq_network
+
+networks:
+  rabbitmq_network:
+    driver: bridge
